@@ -20,8 +20,8 @@ export function TagFilter({ tags }: TagFilterProps) {
   };
 
   return (
-    <div className="w-full">
-      <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide pb-2">
+    <div className="w-full overflow-hidden">
+      <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide pb-2" style={{ WebkitOverflowScrolling: 'touch' }}>
         <button
           onClick={() => router.push("/")}
           className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -37,7 +37,7 @@ export function TagFilter({ tags }: TagFilterProps) {
           <button
             key={tag}
             onClick={() => handleTagClick(tag)}
-            className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+            className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
               activeTag === tag
                 ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                 : "bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700"

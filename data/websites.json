@@ -1867,7 +1867,7 @@
   {
     "tags": "site website 哲学",
     "title": "爱思想",
-    "url": "httpsaisixiang.com/://www."
+    "url": "https://www.aisixiang.com/"
   },
   {
     "tags": "site 哲学",
@@ -17528,6 +17528,11 @@
     "tags": "site wiki ",
     "title": "wikipedia-年份词条",
     "url": "https://zh.wikipedia.org/zh-cn/2024%E5%B9%B4"
+  },
+  {
+    "tags": "site person",
+    "title": "监控系统",
+    "url": "https://status.lhqs.ink"
   },
   {
     "tags": "site person",

@@ -37,7 +37,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="py-16 px-4 max-w-6xl mx-auto">
         <h1 className="text-5xl font-bold mb-6 text-center">
@@ -45,14 +45,14 @@ export default function HomePage() {
             精选网址导航
           </span>
         </h1>
-        <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-8 text-center">
+        <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 text-center">
           收录 <span className="text-blue-500 font-semibold">{stats.totalWebsites}+</span> 优质网站
           · <span className="text-purple-500 font-semibold">{stats.totalTags}</span> 个分类标签
         </p>
 
-        <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
+        <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
-            <kbd className="px-2 py-1 rounded bg-gray-800 text-gray-300 text-xs border border-gray-700">⌘K</kbd>
+            <kbd className="px-2 py-1 rounded bg-muted text-muted-foreground text-xs border">⌘K</kbd>
             <span>快速搜索</span>
           </div>
           <span>·</span>
@@ -62,7 +62,7 @@ export default function HomePage() {
 
       {/* Tag Filter */}
       <section className="px-4 max-w-6xl mx-auto mb-8">
-        <div className="bg-gray-900/50 backdrop-blur-sm rounded-lg p-4 border border-gray-800">
+        <div className="glass rounded-lg p-4">
           <TagFilter tags={popularTags} />
         </div>
       </section>
@@ -72,7 +72,7 @@ export default function HomePage() {
         <section className="px-4 max-w-6xl mx-auto mb-6">
           <div className="flex items-center gap-3">
             <h2 className="text-2xl font-bold text-blue-500">#{decodeURIComponent(tag)}</h2>
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-muted-foreground">
               {allWebsites.length} 个网站
             </span>
           </div>
@@ -91,7 +91,7 @@ export default function HomePage() {
           <div className="text-center py-20">
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-xl font-semibold mb-2">未找到网站</h3>
-            <p className="text-gray-500">
+            <p className="text-muted-foreground">
               该标签下暂无网站，试试其他标签吧
             </p>
           </div>
@@ -112,25 +112,25 @@ export default function HomePage() {
 
       {/* Stats Section */}
       <section className="mt-20 px-4 max-w-6xl mx-auto pb-16">
-        <div className="bg-gray-900/50 backdrop-blur-sm rounded-lg p-8 border border-gray-800">
+        <div className="glass rounded-lg p-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
               <div className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent mb-2">
                 {stats.totalWebsites}+
               </div>
-              <div className="text-sm text-gray-400">精选网站</div>
+              <div className="text-sm text-muted-foreground">精选网站</div>
             </div>
             <div>
               <div className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent mb-2">
                 {stats.totalTags}
               </div>
-              <div className="text-sm text-gray-400">分类标签</div>
+              <div className="text-sm text-muted-foreground">分类标签</div>
             </div>
             <div>
               <div className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent mb-2">
                 {stats.avgTagsPerSite}
               </div>
-              <div className="text-sm text-gray-400">平均标签数</div>
+              <div className="text-sm text-muted-foreground">平均标签数</div>
             </div>
           </div>
         </div>

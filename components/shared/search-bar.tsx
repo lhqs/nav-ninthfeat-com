@@ -65,12 +65,12 @@ export function SearchBar({ onClose }: SearchBarProps) {
     >
       <div className="max-w-2xl mx-auto px-4 pt-20">
         <div
-          className="bg-gray-900 rounded-lg overflow-hidden border border-gray-800 shadow-2xl animate-in slide-in-from-top-4 duration-300"
+          className="bg-card rounded-lg overflow-hidden border border-border shadow-2xl animate-in slide-in-from-top-4 duration-300"
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="flex items-center border-b border-gray-800 px-4">
+          <div className="flex items-center border-b border-border px-4">
             <svg
-              className="w-5 h-5 text-gray-500"
+              className="w-5 h-5 text-muted-foreground"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -93,10 +93,10 @@ export function SearchBar({ onClose }: SearchBarProps) {
                   onClose();
                 }
               }}
-              className="flex-1 bg-transparent border-none outline-none px-4 py-4 text-lg text-white placeholder-gray-500"
+              className="flex-1 bg-transparent border-none outline-none px-4 py-4 text-lg text-foreground placeholder:text-muted-foreground"
               autoFocus
             />
-            <kbd className="text-xs text-gray-500">ESC</kbd>
+            <kbd className="text-xs text-muted-foreground">ESC</kbd>
           </div>
 
           {results.length > 0 && (
@@ -107,10 +107,10 @@ export function SearchBar({ onClose }: SearchBarProps) {
                   href={site.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-3 px-4 py-3 border-b border-gray-800/50 transition-colors ${
+                  className={`flex items-center gap-3 px-4 py-3 border-b border-border/50 transition-colors ${
                     index === selectedIndex
                       ? "bg-blue-500/10"
-                      : "hover:bg-gray-800/50"
+                      : "hover:bg-muted/50"
                   }`}
                   onClick={onClose}
                 >
@@ -124,20 +124,20 @@ export function SearchBar({ onClose }: SearchBarProps) {
                       }}
                     />
                   ) : (
-                    <div className="w-6 h-6 rounded bg-gray-800 flex items-center justify-center text-xs font-bold text-gray-600">
+                    <div className="w-6 h-6 rounded bg-muted flex items-center justify-center text-xs font-bold text-muted-foreground">
                       {site.title[0]}
                     </div>
                   )}
                   <div className="flex-1 min-w-0">
-                    <div className="font-medium text-sm truncate text-white">
+                    <div className="font-medium text-sm truncate text-foreground">
                       {site.title}
                     </div>
-                    <div className="text-xs text-gray-500 truncate">
+                    <div className="text-xs text-muted-foreground truncate">
                       {site.tagArray.map(tag => `#${tag}`).join(" ")}
                     </div>
                   </div>
                   <svg
-                    className="w-4 h-4 text-gray-500"
+                    className="w-4 h-4 text-muted-foreground"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -155,7 +155,7 @@ export function SearchBar({ onClose }: SearchBarProps) {
           )}
 
           {query && results.length === 0 && (
-            <div className="px-4 py-8 text-center text-gray-500">
+            <div className="px-4 py-8 text-center text-muted-foreground">
               未找到相关网站
             </div>
           )}

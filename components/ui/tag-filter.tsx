@@ -27,7 +27,7 @@ export function TagFilter({ tags }: TagFilterProps) {
           className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
             !activeTag
               ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-              : "bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700"
+              : "bg-muted text-muted-foreground hover:text-foreground hover:bg-muted/80"
           }`}
         >
           全部
@@ -40,7 +40,7 @@ export function TagFilter({ tags }: TagFilterProps) {
             className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
               activeTag === tag
                 ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
-                : "bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700"
+                : "bg-muted text-muted-foreground hover:text-foreground hover:bg-muted/80"
             }`}
           >
             #{tag} <span className="text-xs opacity-70">{count}</span>

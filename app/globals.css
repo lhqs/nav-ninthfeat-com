@@ -4,6 +4,24 @@
 
 @layer base {
   :root {
+    /* Light mode colors (default) */
+    --background: 0 0% 100%;         /* white */
+    --foreground: 0 0% 10%;          /* near black text */
+    --card: 0 0% 98%;                /* light gray card */
+    --card-foreground: 0 0% 10%;     /* dark text */
+    --primary: 217 91% 60%;          /* blue-500 */
+    --primary-foreground: 0 0% 98%;  /* white text */
+    --muted: 0 0% 96%;               /* gray-100 equivalent */
+    --muted-foreground: 0 0% 45%;    /* gray-600 equivalent */
+    --accent: 262 83% 58%;           /* purple-600 */
+    --accent-foreground: 0 0% 98%;   /* white text */
+    --border: 0 0% 90%;              /* gray-200 equivalent */
+    --ring: 217 91% 60%;             /* blue-500 */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark mode colors */
     --background: 0 0% 4%;           /* gray-950 equivalent */
     --foreground: 0 0% 98%;          /* white text */
     --card: 0 0% 9%;                 /* gray-900 equivalent */
@@ -16,7 +34,6 @@
     --accent-foreground: 0 0% 98%;   /* white text */
     --border: 0 0% 20%;              /* gray-800 equivalent */
     --ring: 217 91% 60%;             /* blue-500 */
-    --radius: 0.5rem;
   }
 }
 
@@ -42,7 +59,9 @@ body {
 }
 
 .glass {
-  @apply bg-gray-900/80 backdrop-blur-sm border border-gray-700;
+  @apply backdrop-blur-sm border;
+  background-color: hsl(var(--card) / 0.8);
+  border-color: hsl(var(--border));
 }
 
 .transition-smooth {

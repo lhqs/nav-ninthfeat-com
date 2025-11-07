@@ -14,7 +14,7 @@ export function WebsiteCard({ website }: WebsiteCardProps) {
   return (
     <button
       onClick={handleClick}
-      className="w-full text-left bg-gray-900/50 backdrop-blur-sm rounded-lg p-4 border border-gray-800 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 group"
+      className="w-full text-left glass rounded-lg p-4 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 group"
     >
       <div className="flex items-start gap-3">
         {website.favicon ? (
@@ -27,7 +27,7 @@ export function WebsiteCard({ website }: WebsiteCardProps) {
             }}
           />
         ) : (
-          <div className="w-8 h-8 rounded bg-gray-800 flex items-center justify-center text-xs font-bold text-gray-400 flex-shrink-0">
+          <div className="w-8 h-8 rounded bg-muted flex items-center justify-center text-xs font-bold text-muted-foreground flex-shrink-0">
             {website.title[0]}
           </div>
         )}
@@ -36,12 +36,12 @@ export function WebsiteCard({ website }: WebsiteCardProps) {
           <h3 className="font-medium text-sm truncate group-hover:text-blue-400 transition-colors">
             {website.title}
           </h3>
-          <p className="text-xs text-gray-500 truncate mt-0.5">
+          <p className="text-xs text-muted-foreground truncate mt-0.5">
             {website.url.replace(/^https?:\/\//, '').split('/')[0]}
           </p>
 
           {website.description && (
-            <p className="text-xs text-gray-400 mt-2 line-clamp-2">
+            <p className="text-xs text-muted-foreground mt-2 line-clamp-2">
               {website.description}
             </p>
           )}
@@ -50,13 +50,13 @@ export function WebsiteCard({ website }: WebsiteCardProps) {
             {website.tagArray.slice(0, 3).map((tag) => (
               <span
                 key={tag}
-                className="text-[10px] px-1.5 py-0.5 rounded-md bg-gray-800 text-gray-400"
+                className="text-[10px] px-1.5 py-0.5 rounded-md bg-muted text-muted-foreground"
               >
                 #{tag}
               </span>
             ))}
             {website.tagArray.length > 3 && (
-              <span className="text-[10px] text-gray-500">
+              <span className="text-[10px] text-muted-foreground">
                 +{website.tagArray.length - 3}
               </span>
             )}
@@ -64,7 +64,7 @@ export function WebsiteCard({ website }: WebsiteCardProps) {
         </div>
 
         <svg
-          className="w-4 h-4 text-gray-500 flex-shrink-0 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+          className="w-4 h-4 text-muted-foreground flex-shrink-0 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

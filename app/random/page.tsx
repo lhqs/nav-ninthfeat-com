@@ -39,7 +39,7 @@ export default function RandomPage() {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           <span className="gradient-text">任意门</span>
         </h1>
-        <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
           随机探索精选网站 · 发现新的可能
         </p>
       </section>
@@ -66,11 +66,11 @@ export default function RandomPage() {
                 </div>
               </div>
 
-              <h2 className="text-2xl font-bold mb-2 text-white">{website.title}</h2>
-              <p className="text-gray-400 mb-6">{website.url}</p>
+              <h2 className="text-2xl font-bold mb-2 text-foreground">{website.title}</h2>
+              <p className="text-muted-foreground mb-6">{website.url}</p>
 
               {website.description && (
-                <p className="text-sm text-gray-400 mb-6 max-w-md mx-auto">
+                <p className="text-sm text-muted-foreground mb-6 max-w-md mx-auto">
                   {website.description}
                 </p>
               )}
@@ -79,7 +79,7 @@ export default function RandomPage() {
                 {website.tagArray.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 rounded-full text-xs bg-gray-800 text-gray-400"
+                    className="px-3 py-1 rounded-full text-xs bg-muted text-muted-foreground"
                   >
                     #{tag}
                   </span>
@@ -96,7 +96,7 @@ export default function RandomPage() {
                 <button
                   onClick={handleSpin}
                   disabled={isSpinning}
-                  className="px-8 py-3 rounded-lg bg-gray-900/80 border border-gray-700 text-white font-medium hover:border-blue-500/50 transition-all duration-300 disabled:opacity-50"
+                  className="px-8 py-3 rounded-lg glass text-foreground font-medium hover:border-blue-500/50 transition-all duration-300 disabled:opacity-50"
                 >
                   {isSpinning ? "抽取中..." : "换一个"}
                 </button>
@@ -109,8 +109,8 @@ export default function RandomPage() {
       {/* Tips */}
       <section className="mt-12 max-w-2xl mx-auto">
         <div className="glass rounded-lg p-6">
-          <h2 className="text-sm font-semibold mb-3 text-gray-400">使用提示</h2>
-          <ul className="space-y-2 text-sm text-gray-400">
+          <h2 className="text-sm font-semibold mb-3 text-muted-foreground">使用提示</h2>
+          <ul className="space-y-2 text-sm text-muted-foreground">
             <li className="flex items-start gap-2">
               <span className="text-blue-500">•</span>
               <span>点击"换一个"按钮随机抽取网站</span>

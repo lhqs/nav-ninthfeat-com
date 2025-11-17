@@ -16,7 +16,7 @@ export function Header() {
             href="/"
             className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
           >
-            乱红如雨
+            精选网址导航
           </Link>
 
           <div className="hidden md:flex items-center gap-6">

@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useState, useMemo, useEffect } from "react";
 import { getAllWebsites, getPopularTags, getStats, getWebsitesByTag } from "@/lib/data";
@@ -8,7 +9,7 @@ import { TagFilter } from "@/components/ui/tag-filter";
 
 const ITEMS_PER_PAGE = 60;
 
-export default function HomePage() {
+function HomeContent() {
   const searchParams = useSearchParams();
   const tag = searchParams.get("tag");
   const [displayCount, setDisplayCount] = useState(ITEMS_PER_PAGE);
@@ -136,5 +137,20 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-muted-foreground">加载中...</p>
+        </div>
+      </div>
+    }>
+      <HomeContent />
+    </Suspense>
   );
 }

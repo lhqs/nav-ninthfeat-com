@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllTags } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://info.lhqs.ink';
+  const baseUrl = 'https://nav.ninthfeast.com';
   const tags = getAllTags();
 
   const staticPages = [

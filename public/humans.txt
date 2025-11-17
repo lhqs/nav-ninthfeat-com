@@ -1,14 +1,19 @@
 /* TEAM */
-  Developer: 乱红如雨
+  Developer: lhqs (乱红如雨)
   Contact: lhqs.gu@gmail.com
+  GitHub: https://github.com/lhqs
   From: China
 
 /* THANKS */
   Thanks to all the open source contributors
+  Special thanks to Next.js, React, and Tailwind CSS communities
 
 /* SITE */
-  Last update: 2024/11/06
+  Last update: 2024/11/07
   Language: 中文 / Chinese
   Doctype: HTML5
   IDE: VS Code, Claude Code
-  Technologies: Next.js, React, TypeScript, Tailwind CSS
+  Technologies: Next.js 14, React 18, TypeScript, Tailwind CSS, Fuse.js, Framer Motion
+  Standards: HTML5, CSS3, ES2023
+  Components: 3000+ curated websites
+  Software: Next.js, TypeScript, Tailwind CSS

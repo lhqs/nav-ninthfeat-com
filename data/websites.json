@@ -7,7 +7,7 @@
   {
     "tags": "高频访问 site person",
     "title": "乱红如雨",
-    "url": "https://lhqs.vercel.app/"
+    "url": "https://blog.lhqs.ink/"
   },
   {
     "tags": "高频访问 site tech github",
@@ -15,14 +15,14 @@
     "url": "https://github.com/trending"
   },
   {
+    "tags": "高频访问 site import",
+    "title": "四海创作系统",
+    "url": "https://creator.lhqs.ink/"
+  },
+  {
     "tags": "高频访问 site doc 账户 person",
     "title": "语雀",
     "url": "https://yuque.com/"
-  },
-  {
-    "tags": "site work",
-    "title": "MindCoord | Home",
-    "url": "https://home.mindcoord.com"
   },
   {
     "tags": "site manual book 创业",
@@ -17528,11 +17528,6 @@
     "tags": "site wiki ",
     "title": "wikipedia-年份词条",
     "url": "https://zh.wikipedia.org/zh-cn/2024%E5%B9%B4"
-  },
-  {
-    "tags": "site person",
-    "title": "监控系统",
-    "url": "https://status.lhqs.ink"
   },
   {
     "tags": "site person",

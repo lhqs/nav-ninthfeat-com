@@ -3,7 +3,7 @@
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useState, useMemo, useEffect } from "react";
-import { getAllWebsites, getPopularTags, getStats, getWebsitesByTag } from "@/lib/data";
+import { getAllWebsites, getPopularTags, getAllTagsWithCount, getStats, getWebsitesByTag } from "@/lib/data";
 import { WebsiteCard } from "@/components/ui/website-card";
 import { TagFilter } from "@/components/ui/tag-filter";
 
@@ -26,6 +26,7 @@ function HomeContent() {
 
   const hasMore = displayCount < allWebsites.length;
   const popularTags = getPopularTags(20);
+  const allTags = getAllTagsWithCount();
   const stats = getStats();
 
   // 标签变化时重置显示数量
@@ -64,7 +65,7 @@ function HomeContent() {
       {/* Tag Filter */}
       <section className="px-4 max-w-6xl mx-auto mb-8">
         <div className="glass rounded-lg p-4">
-          <TagFilter tags={popularTags} />
+          <TagFilter popularTags={popularTags} allTags={allTags} totalTags={stats.totalTags} />
         </div>
       </section>
 

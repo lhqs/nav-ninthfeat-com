@@ -47,6 +47,22 @@ export function getWebsitesByTag(tag: string): WebsiteWithMetadata[] {
   );
 }
 
+// 获取所有标签及其数量
+export function getAllTagsWithCount(): Array<{ tag: string; count: number }> {
+  const websites = getAllWebsites();
+  const tagCounts = new Map<string, number>();
+
+  websites.forEach(site => {
+    site.tagArray.forEach(tag => {
+      tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
+    });
+  });
+
+  return Array.from(tagCounts.entries())
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
 // 获取热门标签（网站数量最多的前 N 个）
 // 排除过于通用的标签（出现在超过30%网站中的标签）
 export function getPopularTags(limit: number = 20): Array<{ tag: string; count: number }> {

@@ -141,7 +141,7 @@ export default function AboutPage() {
             </a>
             <span className="text-muted-foreground">·</span>
             <a
-              href="https://github.com/lhqs/lhqs-site-nav"
+              href="https://github.com/lhqs/nav-ninthfeat-com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:text-blue-400 hover:underline"
